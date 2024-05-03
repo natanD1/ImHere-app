@@ -42,7 +42,13 @@ export const styles = StyleSheet.create({
     form: {
         width: '100%',
         flexDirection: 'row',
+        textAlign: "center",        
         marginTop: 36,
         marginBottom: 42
     },
+    listEmptyText: {
+        color: '#FFF',
+        textAlign: "center",
+        fontSize: 14 
+    }
 });
