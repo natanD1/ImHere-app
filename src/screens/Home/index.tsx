@@ -1,19 +1,30 @@
 import React from 'react';
-import { Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
+import { Text, View, TextInput, TouchableOpacity, FlatList, Alert } from 'react-native';
 import { Participant } from '../../components/Participant';
 import { styles } from './styles';
 
 export function Home() {
 
-    const participants = ['Rodrigo', 'Vini', 'Diego', 'Biro', 'Ana', 'Isa',
-        'Jack', 'Mayk', 'João'];
+    const participants = ["Rodrigo", "Vini", "Diego", "Biro", "Ana", "Isa",
+        "Jack", "Mayk", "João"];
 
     function handleParticipantAdd() {
-        console.log("Você Clicou no botão de ADICIONAR!");
+        if (participants.includes("Rodrigo")){
+           return Alert.alert("Participante existe!","Já existe um participante na lista com este nome.")
+        }
     }
 
     function handleParticipantRemove(name: string) {
-        console.log(`Você clicou em remover participante ${name}`);
+        Alert.alert("Remover",`Remover o participante ${name}?`,[
+            {
+                text: "Sim",
+                onPress: () => Alert.alert("Removido","Participante removido com sucesso.")
+            },
+            {
+                text: "Não",
+                style: 'cancel'
+            }
+        ]);
     }
 
     return (
@@ -29,7 +40,7 @@ export function Home() {
             <View style={styles.form}>
                 <TextInput
                     style={styles.input}
-                    placeholder='Nome do participante'
+                    placeholder="Nome do participante"
                     placeholderTextColor="#6b6b6b"
                 />
                 <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
