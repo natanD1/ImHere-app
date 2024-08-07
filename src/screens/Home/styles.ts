@@ -3,42 +3,43 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#131016',
+        backgroundColor: '#f3f2f8',
         padding: 24
     },
     eventName: {
-        color: '#fdfcfe',
+        color: '#000000',
         fontSize: 24,
         fontWeight: 'bold',
         marginTop: 48
     },
     eventDate: {
-        color: '#6b6b6b',
+        color: '#505155',
         fontSize: 16
     },
     input: {
         flex: 1,
         height: 56,
-        backgroundColor: '#1F1E25',
+        backgroundColor: '#FFFFFF',
         borderRadius: 5,
-        color: '#FFF',
+        color: '#383B43',
         padding: 16,
         fontSize: 16,
         marginRight: 12
     },
 
     buttonText: {
-        color: '#FFF',
+        color: '#FFFFFF',
         fontSize: 24
     },
     button: {
         width: 56,
         height: 56,
         borderRadius: 5,
-        backgroundColor: '#31CF67',
+        backgroundColor: '#7DCC3D',
         alignItems: 'center',
         justifyContent: 'center'
     },
+    
     form: {
         width: '100%',
         flexDirection: 'row',
@@ -47,7 +48,7 @@ export const styles = StyleSheet.create({
         marginBottom: 42
     },
     listEmptyText: {
-        color: '#FFF',
+        color: '#FFFFFF',
         textAlign: "center",
         fontSize: 14 
     }
